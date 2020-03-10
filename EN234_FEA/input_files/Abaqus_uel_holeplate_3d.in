@@ -21,7 +21,7 @@
        DISPLACEMENT DOF, 1, 2, 3
 %    Enter x,y,z coords of nodes.   The node number is optional, and is ignored in the code.
       COORDINATES
-     1, -0.328142434,  0.944628239,           0.
+      1, -0.328142434,  0.944628239,           0.
       2, -0.426637769,           2.,           0.
       3,          3.5,           2.,           0.
       4,          3.5, 0.000686436892,           0.
@@ -4141,7 +4141,7 @@ END NODES
 %     Define element connectivity
 %     The element number (first number in the list) is optional, and is ignored in the code
         CONNECTIVITY, soft
- 1,  181,  201,   18,   17,  865,  885,  702,  701
+   1,  181,  201,   18,   17,  865,  885,  702,  701
    2,  201,  202,   19,   18,  885,  886,  703,  702
    3,  202,  203,   20,   19,  886,  887,  704,  703
    4,  203,  204,   21,   20,  887,  888,  705,  704
@@ -5541,6 +5541,11 @@ END NODES
 1398, 1678, 1453, 1374, 1452, 2362, 2137, 2058, 2136
 1399, 1678, 1695, 1454, 1453, 2362, 2379, 2138, 2137
 1400, 1695, 1696, 1455, 1454, 2379, 2380, 2139, 2138
+END CONNECTIVITY
+PROPERTIES
+500.d0, 0.3d0
+END PROPERTIES
+CONNECTIVITY, hard
 1401, 1696, 1697, 1456, 1455, 2380, 2381, 2140, 2139
 1402, 1697, 1698, 1457, 1456, 2381, 2382, 2141, 2140
 1403, 1698, 1699, 1458, 1457, 2382, 2383, 2142, 2141
@@ -7366,13 +7371,16 @@ END MESH
          SOLVER, DIRECT, LINEAR
 
          PRINT STATE, Output_files\contourplots.dat
-%            DEGREES OF FREEDOM   % Uncomment this to print the displacements
+            DEGREES OF FREEDOM   % Uncomment this to print the displacements
             FIELD VARIABLES, S11,S22,S33,S12,S13,S23
             DISPLACED MESH
-            DISPLACEMENT SCALE FACTOR, 1.d0
+            DISPLACEMENT SCALE FACTOR, 50.d0
+            ZONES,COMBINE
+               soft, hard
+            END ZONES         
          END PRINT STATE
 
         END STATIC STEP
-         
+
 
    STOP

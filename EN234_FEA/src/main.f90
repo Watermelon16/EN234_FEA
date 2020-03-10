@@ -13,7 +13,7 @@ program en234fea
 
   VS_root_folder = 'F:/Repos/EN234_FEA/EN234_FEA/'
   root_directory = VS_root_folder
-    
+  
 !
 !   Homework Assignments 2017
 !   You can test the ABAQUS UEL, UMAT and VUMAT codes that you develop for EN234
@@ -31,12 +31,12 @@ program en234fea
 !   Demo codes - these provide examples of coding and testing ABAQUS user elements in EN234FEA
 !
 !   Small strain linear elasticity - the UEL is in Abaqus_uel_3d.for
-   infil = 'input_files/Abaqus_uel_linear_elastic_3d.in'
-   outfil = 'Output_files/Abaqus_uel_linear_elastic_3d.out'
+   !infil = 'input_files/Abaqus_uel_linear_elastic_3d.in'
+   !outfil = 'Output_files/Abaqus_uel_linear_elastic_3d.out'
 
 !   Linear elastic plate with a central hole using an ABAQUS UEL
-!   infil = 'input_files/Abaqus_uel_holeplate_3d.in'
-!   outfil = 'Output_files/Abaqus_uel_holeplate_3d.out'
+   !infil = 'input_files/abaqus_uel_holeplate_3d.in'
+   !outfil = 'output_files/abaqus_uel_holeplate_3d.out'
 
 !   Simple 1 element demonstration of an ABAQUS VUEL
 !   The source code for the user element is in abaqus_vuel.for
@@ -47,8 +47,8 @@ program en234fea
 !   Runs an explicit dynamic simulation of a 3D plate with a central hole with and ABAQUS VUEL
 !   This simulation will take a few minutes to run (running in release mode will speed it up)
 !
-!   infil = 'input_files/Abaqus_uel_holeplate_3d.in'
-!   outfil = 'output_files/Abaqus_uel_holeplate_3d.out'
+   !infil = 'input_files/Abaqus_vuel_holeplate_3d.in'
+   !outfil = 'output_files/Abaqus_vuel_holeplate_3d.out'
    
 !  Tests an ABAQUS format UMAT subroutine (in abaqus_umat_elastic.for) with two 8 noded quadrilateral elements
 !   infil = 'input_files/Abaqus_umat_linear_elastic_3d.in'
@@ -66,8 +66,8 @@ program en234fea
 !   Homework 3: develop and test an ABAQUS user element implementing 2D linear elasticity with full integration
 
 !   Simple test of a 2D plane element
-!   infil = 'input_files/Abaqus_uel_linear_elastic_2d.in'
-!   outfil = 'Output_files/Abaqus_uel_linear_elastic_2d.out'
+   infil = 'input_files/Abaqus_uel_linear_elastic_2d.in'
+   outfil = 'Output_files/Abaqus_uel_linear_elastic_2d.out'
 
 !  Solve hole-in-a-plate problem with 4 noded quadrilateral elements
 !   infil = 'input_files/Abaqus_uel_holeplate_2d_quad4.in'
